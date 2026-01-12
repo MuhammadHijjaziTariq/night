@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ayesha</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+               <div class="letter">
+    <div class="text">
+        <strong>Good Night, Ash</strong>
+        <p>
+        I wish I was there to say goodnight in person😘💕. Sleep well, Ash
+        </p>
+        <img src="1.gif" alt="Ayesha" class="letter-image">
+    </div>
+</div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        // This triggers the 'flap' class which starts the CSS animations
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+:root {
+  --primary: #ffffff;
+  
+  /* Romantic Midnight Theme */
+  --bg-color: #1a1a2e;         /* Deep Midnight Blue */
+  --bg-envelope-color: #e94560; /* Deep Rose Base */
+  --envelope-tab: #ff4d6d;      /* Slightly brighter flap */
+  --envelope-cover: #e94560;    /* Front body */
+  
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --txt-color: #16213e;         /* Navy text for the white paper */
+  
+  /* Vibrant Heart Seal */
+  --heart-color: #ff0040; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+}
+
+.envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 15px 40px var(--shadow-color);
+  position: relative;
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+  /* Hides the letter at the bottom but allows it to exit the top */
+  clip-path: inset(-100% 0% 0% 0%);
+}
+
+/* Top Flap */
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+
+/* Front Body of Envelope */
+.envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid var(--envelope-cover);
+  border-bottom: 100px solid var(--envelope-cover);
+  border-left: 150px solid var(--envelope-cover);
+}
+
+/* The Letter */
+.letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 85%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--txt-color);
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.text strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: var(--heart-color);
+}
+
+/* Fix for large/cut images */
+.letter-image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 110px;
+  object-fit: contain;
+  margin-top: 5px;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Heart Seal */
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+.heart:before, 
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+
+.heart:before { top: -7.5px; }
+.heart:after { right: 7.5px; }
+
+/* --- Animation States --- */
+
+/* Flap opening */
+.flap .envelope::before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+/* Letter sliding up */
+.flap .letter {
+  bottom: 120px;
+  transform: scale(1.6); /* Slightly increased scale for better impact */
+  transition-delay: 1s;
+  z-index: 5; 
+}
+
+/* Heart disappears when open */
+.flap .heart {
+  transform: translate(-50%, -20%) rotate(90deg);
+  opacity: 0;
+  pointer-events: none;
+  transition-delay: 0s;
+}
