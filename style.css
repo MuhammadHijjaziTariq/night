@@ -1,17 +1,17 @@
 :root {
   --primary: #ffffff;
   
-  /* Romantic Midnight Theme */
-  --bg-color: #1a1a2e;         /* Deep Midnight Blue */
-  --bg-envelope-color: #e94560; /* Deep Rose Base */
-  --envelope-tab: #ff4d6d;      /* Slightly brighter flap */
-  --envelope-cover: #e94560;    /* Front body */
+  /* Sunset Dream Theme */
+  --bg-color: #2d132c;           /* Deep Plum/Eggplant */
+  --bg-envelope-color: #801336;  /* Rich Burgundy Base */
+  --envelope-tab: #c72c41;       /* Brighter Crimson flap */
+  --envelope-cover: #801336;     /* Front body */
   
-  --shadow-color: rgba(0, 0, 0, 0.6);
-  --txt-color: #16213e;         /* Navy text for the white paper */
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --txt-color: #2d132c;          /* Deep plum text */
   
-  /* Vibrant Heart Seal */
-  --heart-color: #ff0040; 
+  /* Warm Glow Heart */
+  --heart-color: #ee4540; 
 }
 
 body {
