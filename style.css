@@ -1,17 +1,17 @@
 :root {
-  --primary: #ffffff;
+  --primary: #fffdf9;             /* Off-white Paper */
   
-  /* Sunset Dream Theme */
-  --bg-color: #2d132c;           /* Deep Plum/Eggplant */
-  --bg-envelope-color: #801336;  /* Rich Burgundy Base */
-  --envelope-tab: #c72c41;       /* Brighter Crimson flap */
-  --envelope-cover: #801336;     /* Front body */
+  /* Matcha Latte Theme */
+  --bg-color: #e8f3d6;            /* Very Pale Sage */
+  --bg-envelope-color: #a3bb98;   /* Muted Matcha Base */
+  --envelope-tab: #cfdac8;        /* Light Sage Flap */
+  --envelope-cover: #a3bb98;      /* Front Body */
   
-  --shadow-color: rgba(0, 0, 0, 0.7);
-  --txt-color: #2d132c;          /* Deep plum text */
+  --shadow-color: rgba(71, 82, 63, 0.3);
+  --txt-color: #47523f;           /* Forest Green Text */
   
-  /* Warm Glow Heart */
-  --heart-color: #ee4540; 
+  /* Dusty Rose Heart */
+  --heart-color: #e49393; 
 }
 
 body {
