@@ -1,17 +1,22 @@
+/* Pinkish Pink Aesthetic Theme 
+  Replaces the Matcha Latte theme with a soft, romantic palette.
+*/
+
 :root {
-  --primary: #fffdf9;             /* Off-white Paper */
+  --primary: #ffffff;               /* Pure White Paper */
   
-  /* Matcha Latte Theme */
-  --bg-color: #e8f3d6;            /* Very Pale Sage */
-  --bg-envelope-color: #a3bb98;   /* Muted Matcha Base */
-  --envelope-tab: #cfdac8;        /* Light Sage Flap */
-  --envelope-cover: #a3bb98;      /* Front Body */
+  /* Pink Theme Palette */
+  --bg-color: #ffe4e9;             /* Softest Pastel Pink Background */
+  --bg-envelope-color: #ffafbd;    /* Peachy Rose Base */
+  --envelope-tab: #ffc3cf;         /* Light Cupcake Pink Flap */
+  --envelope-cover: #ffafbd;       /* Front Body */
   
-  --shadow-color: rgba(71, 82, 63, 0.3);
-  --txt-color: #47523f;           /* Forest Green Text */
+  /* Shadows and Accents */
+  --shadow-color: rgba(214, 93, 122, 0.3); /* Warm Pinkish Shadow */
+  --txt-color: #9e3d54;            /* Deep Raspberry Text */
   
-  /* Dusty Rose Heart */
-  --heart-color: #e49393; 
+  /* Vibrant Heart Seal */
+  --heart-color: #ff4d6d;          /* Bright Cherry Pink */
 }
 
 body {
@@ -82,7 +87,7 @@ body {
   background: var(--primary);
   text-align: center;
   transition: all 1s ease-in-out;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -90,6 +95,7 @@ body {
   justify-content: flex-start;
   z-index: 1;
   cursor: pointer;
+  border-radius: 5px; /* Slight rounding for a softer look */
 }
 
 .text {
@@ -156,7 +162,7 @@ body {
 /* Letter sliding up */
 .flap .letter {
   bottom: 120px;
-  transform: scale(1.6); /* Slightly increased scale for better impact */
+  transform: scale(1.6);
   transition-delay: 1s;
   z-index: 5; 
 }
